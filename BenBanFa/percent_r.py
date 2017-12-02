@@ -15,3 +15,5 @@ print "I said: %s." % text
 print "I said: %r." % text  
 
 # 可见，%r打印时能够重现它所代表的对象(rper() unambiguously recreate the object it represents) 
+
+### 书上给出的解释如下：%r打印出来的是你写在脚本里面的内容，但是%s打印的是你应该看到的内容！
