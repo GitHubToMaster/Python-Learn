@@ -1,0 +1,24 @@
+underscore 下划线字符
+variable 变量
+floating point number 浮点数
+
+
+符号：
+plus 加号
+minus 减号
+slash 斜杠
+asterisk 星号
+percent 百分号
+less than 小于号
+greater than 大于号
+less-than-equal 小于等于
+greater-than-equal 大于等于
+
+# 称为 pound character 或 octothorpe
+
+\n 被称为back-slash n
+
+, (逗号) comma
+
+
+
