@@ -14,4 +14,4 @@ text = "I am %d years old." % 22
 print "I said: %s." % text  
 print "I said: %r." % text  
 
-#	 可见，%r打印时能够重现它所代表的对象(rper() unambiguously recreate the object it represents) 
+# 可见，%r打印时能够重现它所代表的对象(rper() unambiguously recreate the object it represents) 
