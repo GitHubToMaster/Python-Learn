@@ -40,5 +40,54 @@ find	:	使用find进行文件的查找，用来在特定的目录中搜索符合
 						-size -5k -size +5M 表示我们要找的文件大小大于5k小于5M的文件
 							-perm 	查找当前目录下文件权限为给定数值的文件或者文件名
 					find ./ -perm 888 查找当前目录下权限为888的文件或者目录
-					
+
+cp		:	拷贝文件
+			-r		当要拷贝的文件是一个目录的时候，我们使用-r		cp	test	/lianxi	-r
+			-v		显示拷贝进度
+			-i		以交互的方式复制
+			-a		拷贝过去之后，保留原目录的链接，以及文件属性，简单而言保留原文件的属性
+			-f		已经存在的目标文件而不提示
+mv		:	可以用来移动文件或者目录，也可以用来给文件重命名
+			-v		显示拷贝进度
+			-i		以交互的方式复制
+			-f		禁止交互式的操作，如果覆盖也不会给出提示！
+tar		:	可以用来打包文件
+			-z		以gzip的格式打包或者解gzip结尾的包
+			-v		显示打包或者解包进度
+			-f		指定我们要将打包或者解包之后的文件存放在哪里
+			-x		指定我们要解包
+			-c		指定我们要打包
+			-j		以bz2的格式打包或者解bz2结尾的包
+			
+gzip	:	可以用来对.tar结尾的文件进行压缩形成.tar.gz文件，或者对.tar结尾的文件进行压缩形成.tar.gz文件
+			-r		对.tar结尾的文件进行压缩形成.tar.gz文件
+			-d		对.tar结尾的文件进行压缩形成.tar.gz文件
+			-C		用来指定压缩到哪个目录，后面跟着目录
+zip		：	通过zip命令压缩文件不需要指定文件扩展名，文件扩展名默认为zip
+unzip	：	将.zip结尾的文件解压
+			-d		使用-d参数，后面跟上一个目录的名字，将文件解压到该目录，如果目录不存在会自动创建
+			unzip -d test myzip.zip
+				例子1：
+					[root@localhost test]# tar -cvf all.tar ex[1-9].py
+					[root@localhost test]# gzip -r all.tar
+					[root@localhost test]# gzip -d all.tar.gz 
+					[root@localhost test]# tar -xvf all.tar 
+				例子2：以tar.gz的形式进行压缩和解压文件
+					[root@localhost test]# tar -zcvf all.tar.gz ex[1-9].py 
+					相当于例子1的前两句话
+					[root@localhost test]# tar -zxvf all.tar.gz 
+					相当于例子1的后两句话
+				例子3：以bz2的压缩格式进行压缩和解压文件
+					[root@localhost test]# tar -jcvf all.tar.bz2 ex[1-9].py 
+					[root@localhost test]# tar -jxvf all.tar.bz2
+				例子4：将压缩文件指定到哪个目录中(使用-C)
+					[root@localhost test]# tar -zcvf all.tar.gz ex[1-9].py -C ./test1/
+which		:	使用which查看命令的位置
+
+
+
+
+
+			
+
 					
